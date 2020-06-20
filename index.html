@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Requests made easiser</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/css_compiled/style.css">
+
+    <!-- The icons -->
+    <link rel="stylesheet" href="./assets/line-awesome-1.3.0/1.3.0/css/line-awesome.css">
+</head>
+<body>
+    <div class="root">
+        <div class="container">
+
+            <!-- The header -->
+            <div class="header">
+                <a href="index.html">
+                    <div class="head_txt">
+                        AJAX_Req<span class="lab la-js-square"></span>
+                    </div>
+                </a>
+                <div class="las la-bars menu_btn"></div>
+                <div id="menu">
+                    <a href="./index.html"><i class="las la-home"></i> Home</a>
+
+                    <a href="./getstarted.html"><i class="las la-anchor"></i> Get Started</a>
+                    
+                    <a href="#"><i class="las la-code la-user-cog"></i> About</a>
+                </div>
+            </div>
+
+            <!-- the contents -->
+            <div class="contents">
+                <section>
+                    <h1>Alter the contents on the page without reloading</h1>
+                    <h2>with <b>A</b>synchronous <b>J</b>avaScript <b>A</b>nd <b>X</b>ML</h2>
+
+                    <p>No need to waste a big block of code for your AJAX Only, just include the AJAX_Req.js to your HTML Document. And. You are ready to rock.</p>
+                </section>
+                <section>
+                    <h1>Create AJAX Requests in one line</h1>
+                    <p><a class="link" href="#">Get Started</a> to use the AJAX_Req.js</p>
+                    <ul>
+                        <li>Fully Customisable</li>
+                        <li>Compatible with most browsers</li>
+                    </ul>
+                </section>
+
+
+                <section>
+                    <h1>Free download</h1>
+                    <p>
+                        <button class="button wrapper" onclick="downloadBox()">
+                            <i class="la la-download fs32"></i> Download/Embed
+                        </button>
+
+                        <div class="downloadBox" style="display: none;">
+                            <div class="close la la-times" onclick="closeBox()"></div>
+                            <h1>Embed to Page (latest version)</h1>
+                            <div class="code-snippet cdn-emb1" onclick="copyIt('.cdn-emb1')"></div>
+                            <h2>Download for offline use</h2>
+                            <p><a href="ajax_req.js" class="link wrapper" download=""><i class="la la-cloud-download fs32"></i> Download (latest version)</a>
+                            </p>
+                            <h2>On Github!</h2>
+                            <p><a href="https://github.com" target="__blank" class="link wrapper"><i class="lab la-github fs32"></i> Github</a></p>
+                            <p><a href="./getstarted.html" class="link wrapper">
+                            <i class="la la-book fs32"></i> Get Started
+                            </a></p>
+                        </div>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/copyit.js"></script>
+    <script src="./ajax_req.js"></script>
+    <script src="./assets/menu.js"></script>
+
+    <script>
+        
+        function downloadBox() {
+            document.querySelector('.downloadBox').style.display = "block"
+            
+        }
+        function closeBox() {
+            document.querySelector('.downloadBox').style.display = "none" 
+        }
+
+        createRq('./assets/file.txt', '.cdn-emb1', 'myArr1' ,'no', undefined)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./assets/css_compiled/style.css">
+
+    <!-- The icons -->
+    <link rel="stylesheet" href="./assets/line-awesome-1.3.0/1.3.0/css/line-awesome.css">
+</head>
+<body>
+    <div class="root">
+        <div class="container">
+            <!-- The header -->
+            <div class="header">
+                <a href="index.html">
+                    <div class="head_txt">
+                        AJAX_Req<span class="lab la-js-square"></span>
+                    </div>
+                </a>
+                <div class="la la-bars menu_btn"></div>
+                <div id="menu">
+                    <a href="./index.html"><i class="la la-home"></i> Home</a>
+
+                    <a href="./getstarted.html"><i class="la la-anchor"></i> Get Started</a>
+                    
+                    <a href="#"><i class="la la-code la-user-cog"></i> About</a>
+                </div>
+            </div>
+            <!-- the contents -->
+            <div class="contents">
+                <section>
+                    <h1>1. Including the JS to our HTML Page</h1>
+
+                    <p>Do this pretty easily by pasting the following code to your HTML document:</p>
+                    <div class="code-snippet emmbed" onclick="copyIt('.emmbed')"></div>
+
+                    <div class="wrapper warn">
+                        <div class="icon">
+                            <i class="la la-warning fs32"></i>
+                        </div>
+                        <div>
+                            Always use the AJAX_Req's <code>script</code> tag before your <code>script</code> tag. Other wise JS will throw an error.
+                        </div>
+                    
+                    </div>
+                    
+                    <h2>2. Use the <code>createRq()</code> function</h2>
+                    <p>The <code>createRq()</code> function is the main function that will create AJAX request. The syntax for creating the requests is:
+                    </p>
+                    <div class="code-snippet emmbed2" onclick="copyIt('.emmbed2')"></div>
+                    <p>Where:</p>
+                    <ol>
+                        <li>
+                            <p><code>filename</code> is the name of the file</p>
+                            <p>Data types accepted: <code>string</code></p>
+                        </li>
+                        <li>
+                            <p><code>outputEl</code> is the name of the output element. That element will show the responseText as output.</p>
+                            <p>Data types accepted: <code>string</code></p>
+                            <p>Possible values can be: the class of that element along with <code>.</code> or the id along with <code>#</code> or even the name of tag.</p>
+                        </li>
+                        <li>
+                            <p><code>__arr_index</code> is the name of the index needed for usage of <a href="#" class="link"><code>myResponse</code></a> array. We'll discuss that later on.</p>
+                            <p>Data types accepted: <code>string</code>, <code>integer</code></p>
+                        </li>
+                        <li>
+                            <p><code>__isHTML</code> is the data type of your requested file.</p>
+                            <p>Data types accepted: <code>string</code></p>
+                            <p>Possible values can be: <code>yes</code>, <code>no</code></p>
+                        </li>
+                    </ol>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/menu.js"></script>
+    <script src="./ajax_req.js"></script>
+    <script src="./assets/copyit.js"></script>
+    <script>
+        createRq('./assets/file.txt', '.emmbed', 'myArr2', 'no', undefined)
+
+        var copyit_ = document.getElementsByClassName('code-snippet')     
+
+        document.querySelector('.emmbed2').innerHTML = "createRq(<i>filename, outputEl, __arr_index, __isHTML, customCode)</i>"
+    </script>
+</body>
+</html>
